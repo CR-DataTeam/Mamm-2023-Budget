@@ -61,7 +61,7 @@ lockedMonths = colSortList[0:43]
 
 
 creds = service_account.Credentials.from_service_account_file(
-    'C:/Users/joshua.mcdonald/BudgetTemplates2023/serviceacc.json',
+    'serviceacc.json',
     scopes=['https://www.googleapis.com/auth/spreadsheets'],
     )
 service = build('sheets', 'v4', credentials=creds, cache_discovery=False)
@@ -93,7 +93,7 @@ latestAuditUser = dfpiva[dfpiva['AuditDateTime']==latestAuditDate]['AuditUser'].
     
 def fetchData():
     creds = service_account.Credentials.from_service_account_file(
-        'C:/Users/joshua.mcdonald/BudgetTemplates2023/serviceacc.json',
+        'serviceacc.json',
         scopes=['https://www.googleapis.com/auth/spreadsheets'],
         )
     service = build('sheets', 'v4', credentials=creds, cache_discovery=False)

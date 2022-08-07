@@ -7,7 +7,7 @@ def generatePage(facility_name, facility_startrow, facility_endrow):
     from google.oauth2 import service_account
     from googleapiclient.discovery import build
     import strConstants as sc
-
+    
     FACNAME = facility_name
     FACBEG  =  facility_startrow
     FACEND  = facility_endrow
@@ -67,7 +67,7 @@ def generatePage(facility_name, facility_startrow, facility_endrow):
     facilityList=[FACNAME]
 
     creds = service_account.Credentials.from_service_account_file(
-        'C:/Users/joshua.mcdonald/BudgetTemplates2023/serviceacc.json',
+        'serviceacc.json',
         scopes=['https://www.googleapis.com/auth/spreadsheets'],
         )
     service = build('sheets', 'v4', credentials=creds, cache_discovery=False)
@@ -76,7 +76,7 @@ def generatePage(facility_name, facility_startrow, facility_endrow):
 
     def fetchData():
         creds = service_account.Credentials.from_service_account_file(
-            'C:/Users/joshua.mcdonald/BudgetTemplates2023/serviceacc.json',
+            'serviceacc.json',
             scopes=['https://www.googleapis.com/auth/spreadsheets'],
             )
         service = build('sheets', 'v4', credentials=creds, cache_discovery=False)
