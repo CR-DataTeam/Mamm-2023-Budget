@@ -117,11 +117,12 @@ def fetchData():
     #### tbd
     ###############################################################################
     
+    dfall = dfpiv
     dfit = ledger[f'{FACNAME}_dfload']
-    return dfit
+    return dfit, dfall
 
-
-dfit = fetchData()    
+dfall = fetchData()[1]
+dfit = fetchData()[0]   
 
 
 #for i in range(len(facilityList)):
@@ -377,7 +378,40 @@ else { return (100*((
 
 grid_response = displayTable(dfit)
 
-    
+del dfall['unid']
+del dfall['SortInt']
+del dfall['HistoricalVolumeFlag']
+dlBallantyne = dfall[dfall['FacilityName']=='Ballantyne']
+dlBlakeney = dfall[dfall['FacilityName']=='Blakeney']
+
+
+
+#     naming = facilityList[i].replace(' ','')
+
+#import xlsxwriter
+from io import BytesIO
+
+@st.cache
+def convert_df():
+    output = BytesIO()
+    writer = pd.ExcelWriter(output, 
+                            engine='xlsxwriter', 
+                            engine_kwargs={'options':{'strings_to_numbers':True}})# {'in_memory': True}})
+    for i in range(len(XLfacilityList)):
+        dfall[dfall['FacilityName']==XLfacilityList[i]].to_excel(writer,
+                                                                 sheet_name=XLfacilityList[i],
+                                                                 index=False)
+        # dlBallantyne.to_excel(writer, sheet_name='Ballantyne', index=False)
+        # dlBlakeney.to_excel(writer, sheet_name='Blakeney', index=False)
+    writer.save()
+    return output.getvalue() 
+
+
+st.download_button(
+    label="Download Excel workbook",
+    data=convert_df(),
+    file_name="Mamm2023Budget_export" 
+)    
     
 
 
