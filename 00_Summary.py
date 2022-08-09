@@ -410,10 +410,9 @@ def convert_df():
 st.download_button(
     label="Download Excel workbook",
     data=convert_df(),
-    file_name="Mamm2023Budget_export" 
-)    
-    
-
+    file_name="Mamm2023Budget_export.xlsx",
+    mime="application/vnd.ms-excel"
+)
 
     
     
