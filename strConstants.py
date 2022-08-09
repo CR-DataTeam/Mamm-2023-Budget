@@ -36,6 +36,10 @@ adjustPaddingAndFont = """
                     padding-left: 1rem;
                     padding-right: 1rem;
                 }
+               .css-wldksm {
+                    padding-top: 4rem;
+                    font-size: 0.75rem;
+                }
                .css-b7s55g {
                     padding-top: 0rem;
                     padding-right: 0rem;
