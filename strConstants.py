@@ -31,7 +31,7 @@ footer {visibility: hidden;}
 adjustPaddingAndFont = """
         <style>
                .css-18e3th9 {
-                    padding-top: 2rem;
+                    padding-top: 0rem;
                     padding-bottom: 2rem;
                     padding-left: 1rem;
                     padding-right: 1rem;
@@ -48,10 +48,17 @@ adjustPaddingAndFont = """
                     padding-bottom: 0rem;
                     padding-left: 0rem;
                 }
+               .css-97ja1j {
+                    height: 0rem;
+                }
+               .css-1esuaex {
+                    gap: 0.5rem;
+                }
                .css-1avcm0n {
                     height: 0rem;   
                 }
                .css-uc76bn {
+                    padding-top: 4rem;
                     font-size: 0.75rem;
                 }
                .css-13eon2a {
