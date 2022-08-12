@@ -45,7 +45,7 @@ def generatePage(facility_name, facility_startrow, facility_endrow):
     spreadsheetId = '1-zYgl-7ffj8cV2N80aICDHHKHfqyQX5rE3HXDcgSsfc'
 
     def fetchData():
-        rangeName = 'CurrentFacilityValues!A1:BQ305'
+        rangeName = 'CurrentFacilityValues!A1:BO305'
         result = service.spreadsheets().values().get(
             spreadsheetId=spreadsheetId, range=rangeName).execute()
         
