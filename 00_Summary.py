@@ -403,7 +403,6 @@ def convert_df():
     del exportdf['unid']
     del exportdf['SortInt']
     del exportdf['HistoricalVolumeFlag']
-    del exportdf['ExamCategory']
 
     output = BytesIO()
     writer = pd.ExcelWriter(output, 
