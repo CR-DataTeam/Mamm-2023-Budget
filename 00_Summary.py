@@ -393,12 +393,24 @@ from io import BytesIO
 
 @st.cache
 def convert_df():
+    result = service.spreadsheets().values().get(
+                                            spreadsheetId=spreadsheetId, 
+                                            range='CurrentFacilityValues!A1:BQ321'
+                                            ).execute() 
+    exp_pre = pd.DataFrame(result['values'])
+    exp_pre.columns = exp_pre.iloc[0]
+    exportdf = exp_pre[1:]
+    del exportdf['unid']
+    del exportdf['SortInt']
+    del exportdf['HistoricalVolumeFlag']
+    del exportdf['ExamCategory']
+
     output = BytesIO()
     writer = pd.ExcelWriter(output, 
                             engine='xlsxwriter', 
                             engine_kwargs={'options':{'strings_to_numbers':True}})# {'in_memory': True}})
     for i in range(len(XLfacilityList)):
-        dfall[dfall['FacilityName']==XLfacilityList[i]].to_excel(writer,
+        exportdf[exportdf['FacilityName']==XLfacilityList[i]].to_excel(writer,
                                                                  sheet_name=XLfacilityList[i],
                                                                  index=False)
         # dlBallantyne.to_excel(writer, sheet_name='Ballantyne', index=False)
