@@ -395,7 +395,7 @@ def convert_df():
     # exp_pre = pd.DataFrame(result2['values'])
     # exp_pre.columns = exp_pre.iloc[0]
     # exportdf = exp_pre[1:]
-    dfgo = grid_response['data']
+    dfgo = dfall
     exportdf = dfgo
     del exportdf['unid']
     del exportdf['SortInt']
