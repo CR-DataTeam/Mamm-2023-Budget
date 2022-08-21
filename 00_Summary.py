@@ -401,7 +401,7 @@ def convert_df():
     output = BytesIO()
     writer = pd.ExcelWriter(output, 
                             engine='xlsxwriter', 
-                            engine_kwargs={'options':{'strings_to_numbers':True}})# {'in_memory': True}})
+                            engine_kwargs={'options':{'strings_to_numbers':True, 'in_memory': True}})
     for i in range(len(XLfacilityList)):
         exportdf[exportdf['FacilityName']==XLfacilityList[i]].to_excel(writer,
                                                                  sheet_name=XLfacilityList[i],
