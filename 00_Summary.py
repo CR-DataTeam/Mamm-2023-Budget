@@ -377,6 +377,7 @@ else { return (100*((
 
 
 grid_response = displayTable(dfit)
+dfgo = grid_response['data']
 
 del dfall['unid']
 del dfall['SortInt']
@@ -394,7 +395,8 @@ def convert_df():
     # exp_pre = pd.DataFrame(result2['values'])
     # exp_pre.columns = exp_pre.iloc[0]
     # exportdf = exp_pre[1:]
-    exportdf = dfit
+    dfgo = grid_response['data']
+    exportdf = dfgo
     del exportdf['unid']
     del exportdf['SortInt']
     del exportdf['HistoricalVolumeFlag']
