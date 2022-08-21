@@ -82,7 +82,7 @@ def fetchData():
     service = build('sheets', 'v4', credentials=creds, cache_discovery=False)
     
     spreadsheetId = '1-zYgl-7ffj8cV2N80aICDHHKHfqyQX5rE3HXDcgSsfc'
-    rangeName = 'CurrentFacilityValues!A1:BN321'
+    rangeName = 'CurrentFacilityValues!A1:BQ321'
     result = service.spreadsheets().values().get(
         spreadsheetId=spreadsheetId, range=rangeName).execute()
     #values = result.get('values', [])
@@ -388,19 +388,6 @@ from io import BytesIO
 
 @st.cache
 def convert_df():
-    # result2 = service.spreadsheets().values().get(
-    #                                         spreadsheetId=spreadsheetId, 
-    #                                         range='CurrentFacilityValues!A1:BQ321'
-    #                                         ).execute() 
-    # exp_pre = pd.DataFrame(result2['values'])
-    # exp_pre.columns = exp_pre.iloc[0]
-    # exportdf = exp_pre[1:]
-    #dfgo = dfall
-    # #exportdf = dfgo
-    # del dfall['unid']
-    # del ['SortInt']
-    # del exportdf['HistoricalVolumeFlag']
-
     output = BytesIO()
     writer = pd.ExcelWriter(output, 
                             engine='xlsxwriter', 
