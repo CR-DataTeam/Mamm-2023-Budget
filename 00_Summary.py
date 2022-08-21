@@ -395,18 +395,18 @@ def convert_df():
     # exp_pre = pd.DataFrame(result2['values'])
     # exp_pre.columns = exp_pre.iloc[0]
     # exportdf = exp_pre[1:]
-    dfgo = dfall
-    exportdf = dfgo
-    del exportdf['unid']
-    del exportdf['SortInt']
-    del exportdf['HistoricalVolumeFlag']
+    #dfgo = dfall
+    # #exportdf = dfgo
+    # del dfall['unid']
+    # del ['SortInt']
+    # del exportdf['HistoricalVolumeFlag']
 
     output = BytesIO()
     writer = pd.ExcelWriter(output, 
                             engine='xlsxwriter', 
                             engine_kwargs={'options':{'strings_to_numbers':True, 'in_memory': True}})
     for i in range(len(XLfacilityList)):
-        exportdf[exportdf['FacilityName']==XLfacilityList[i]].to_excel(writer,
+        dfall[dfall['FacilityName']==XLfacilityList[i]].to_excel(writer,
                                                                  sheet_name=XLfacilityList[i],
                                                                  index=False)
     writer.save()
