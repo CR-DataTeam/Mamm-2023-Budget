@@ -381,23 +381,17 @@ grid_response = displayTable(dfit)
 del dfall['unid']
 del dfall['SortInt']
 del dfall['HistoricalVolumeFlag']
-dlBallantyne = dfall[dfall['FacilityName']=='Ballantyne']
-dlBlakeney = dfall[dfall['FacilityName']=='Blakeney']
-
-
-
-#     naming = facilityList[i].replace(' ','')
 
 #import xlsxwriter
 from io import BytesIO
 
 @st.cache
 def convert_df():
-    result = service.spreadsheets().values().get(
+    result2 = service.spreadsheets().values().get(
                                             spreadsheetId=spreadsheetId, 
                                             range='CurrentFacilityValues!A1:BQ321'
                                             ).execute() 
-    exp_pre = pd.DataFrame(result['values'])
+    exp_pre = pd.DataFrame(result2['values'])
     exp_pre.columns = exp_pre.iloc[0]
     exportdf = exp_pre[1:]
     del exportdf['unid']
@@ -412,8 +406,6 @@ def convert_df():
         exportdf[exportdf['FacilityName']==XLfacilityList[i]].to_excel(writer,
                                                                  sheet_name=XLfacilityList[i],
                                                                  index=False)
-        # dlBallantyne.to_excel(writer, sheet_name='Ballantyne', index=False)
-        # dlBlakeney.to_excel(writer, sheet_name='Blakeney', index=False)
     writer.save()
     return output.getvalue() 
 
