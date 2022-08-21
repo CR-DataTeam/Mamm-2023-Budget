@@ -387,13 +387,14 @@ from io import BytesIO
 
 @st.cache
 def convert_df():
-    result2 = service.spreadsheets().values().get(
-                                            spreadsheetId=spreadsheetId, 
-                                            range='CurrentFacilityValues!A1:BQ321'
-                                            ).execute() 
-    exp_pre = pd.DataFrame(result2['values'])
-    exp_pre.columns = exp_pre.iloc[0]
-    exportdf = exp_pre[1:]
+    # result2 = service.spreadsheets().values().get(
+    #                                         spreadsheetId=spreadsheetId, 
+    #                                         range='CurrentFacilityValues!A1:BQ321'
+    #                                         ).execute() 
+    # exp_pre = pd.DataFrame(result2['values'])
+    # exp_pre.columns = exp_pre.iloc[0]
+    # exportdf = exp_pre[1:]
+    exportdf = dfit
     del exportdf['unid']
     del exportdf['SortInt']
     del exportdf['HistoricalVolumeFlag']
