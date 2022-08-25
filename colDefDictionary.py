@@ -220,12 +220,12 @@ def facilityBuild():
             },
             
            
-           {'field': 'AuditComment', 'width':300, 'editable':True, 'suppressSizeToFit':True},
+           {'field': 'AuditComment', 'width':700, 'editable':True, 'suppressSizeToFit':True},
             
             
         ],
         "defaultColDef": {
-            "minColumnWidth": 700,
+            "minColumnWidth": 75,
             'filterable': False,
             'sortable': False,
             'editable': True,
