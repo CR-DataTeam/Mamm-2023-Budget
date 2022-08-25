@@ -225,7 +225,7 @@ def facilityBuild():
             
         ],
         "defaultColDef": {
-            "minColumnWidth": 75,
+            "minColumnWidth": 700,
             'filterable': False,
             'sortable': False,
             'editable': True,
