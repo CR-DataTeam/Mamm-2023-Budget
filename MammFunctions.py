@@ -42,7 +42,7 @@ def generatePage(facility_name, facility_startrow, facility_endrow):
         scopes=['https://www.googleapis.com/auth/spreadsheets'],
         )
     service = build('sheets', 'v4', credentials=creds, cache_discovery=False)
-    spreadsheetId = '1wNYw_VE9oCJENqtUUEnrRgK0qJWL9dMSgHkLXIAtSTw'
+    spreadsheetId = '1-zYgl-7ffj8cV2N80aICDHHKHfqyQX5rE3HXDcgSsfc'
 
     def fetchData():
         rangeName = 'CurrentFacilityValues!A1:BO305'
@@ -116,6 +116,10 @@ def generatePage(facility_name, facility_startrow, facility_endrow):
         latestAuditDateText = 'Latest Audit Date:    ' + str(latestAuditDate)
         st.markdown(f'{latestAuditUserText}')
         st.markdown(f'{latestAuditDateText}')
+    #with col2:
+    #    st.markdown('Jan19-Aug22: Actuals')
+    #    st.markdown('Sep22-Dec22: Forecast')
+    #    st.markdown('Jan23-Dec23: Budget')
     with col3:
         auditUser = st.text_input('Enter name: (required)', value='',)
     with col4:
@@ -125,25 +129,31 @@ def generatePage(facility_name, facility_startrow, facility_endrow):
         
     #### Logic for when the Submission Button is pressed!
     if submissionButton:
-        dfgo['AuditUser'] = str(auditUser)
-        dfgo['AuditDateTime'] = str(auditTime)
-        goog = dfgo.values.tolist()
-        body = { 'values': goog }
-        outputStart = FACBEG
-        outputEnd   = FACEND
-        service.spreadsheets().values().update(
-                                                spreadsheetId=spreadsheetId, 
-                                                range=f'CurrentFacilityValues!A{outputStart}:BQ{outputEnd}',
-                                                valueInputOption='RAW', 
-                                                body=body).execute()
-        # service.spreadsheets().values().append(
-        #                                         spreadsheetId=spreadsheetId, 
-        #                                         range='AuditLog!A:BQ',
-        #                                         valueInputOption='USER_ENTERED', 
-        #                                         body=body).execute()
-        userMessage=''
-        st.balloons()
-        st.experimental_rerun()
+        if len(auditUser) >0:
+            auditTime = datetime.now().replace(tzinfo=zoneinfo.ZoneInfo('US/Eastern')).strftime('%Y-%m-%d %H:%M:%S')
+            dfgo['AuditUser'] = str(auditUser)
+            dfgo['AuditDateTime'] = str(auditTime)
+            goog = dfgo.values.tolist()
+            body = { 'values': goog }
+            outputStart = FACBEG
+            outputEnd   = FACEND
+            service.spreadsheets().values().update(
+                                                    spreadsheetId=spreadsheetId, 
+                                                    range=f'CurrentFacilityValues!A{outputStart}:BQ{outputEnd}',
+                                                    valueInputOption='RAW', 
+                                                    body=body).execute()
+            service.spreadsheets().values().append(
+                                                    spreadsheetId=spreadsheetId, 
+                                                    range='AuditLog!A:BQ',
+                                                    valueInputOption='USER_ENTERED', 
+                                                    body=body).execute()
+            userMessage=''
+            st.balloons()
+            st.experimental_rerun()
+        else:
+            with col3:
+                userMessage = 'Please enter a name.'
+                st.error(userMessage)
 
 
      
