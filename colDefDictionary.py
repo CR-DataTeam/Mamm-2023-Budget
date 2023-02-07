@@ -85,7 +85,7 @@ def facilityBuild():
             
             {   'headerName': '2022',
                  'field': 'group2022',
-                 'openByDefault':True,
+                 'openByDefault':False,
                  'children': [
                      {'field': 'Jan22', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
                      {'field': 'Feb22', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
@@ -109,7 +109,7 @@ def facilityBuild():
                  'field': 'group2023',
                  'openByDefault':True,
                  'children': [
-                     {'field': 'Jan23', 'columnGroupShow':'open', 'editable':True, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
+                     {'field': 'Jan23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
                      {'field': 'Feb23', 'columnGroupShow':'open', 'editable':True, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
                      {'field': 'Mar23', 'columnGroupShow':'open', 'editable':True, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
                      {'field': 'Apr23', 'columnGroupShow':'open', 'editable':True, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
