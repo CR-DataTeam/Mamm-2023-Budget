@@ -407,6 +407,10 @@ with col1:
         file_name="Mamm2023Budget_export.xlsx",
         mime="application/vnd.ms-excel"
     )
+    
+st.markdown("")
+st.markdown("For the time being, Randolph & McDowell's Budget & Actual's are grouped together under the Randolph line item.")
+
 #with col2:
 #    st.markdown('Jan19-Aug22: Actuals')
 #    st.markdown('Sep22-Dec22: Forecast')
