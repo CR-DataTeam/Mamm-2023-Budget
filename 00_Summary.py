@@ -207,7 +207,7 @@ def displayTable(df: pd.DataFrame) -> AgGrid:
         
         {   'headerName': '2022',
              'field': 'group2022',
-             'openByDefault':True,
+             'openByDefault':False,
              'children': [
                  {'field': 'Jan22', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
                  {'field': 'Feb22', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
