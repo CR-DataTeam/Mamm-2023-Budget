@@ -408,15 +408,13 @@ with col1:
         mime="application/vnd.ms-excel"
     )
     
-st.markdown("")
-st.markdown("For the time being, Randolph & McDowell's Budget & Actual's are grouped together under the Randolph line item.")
+    st.markdown("")
+    st.markdown("For the time being, Randolph & McDowell's Budget & Actual's are grouped together under the Randolph line item.")
 
-#with col2:
-#    st.markdown('Jan19-Aug22: Actuals')
-#    st.markdown('Sep22-Dec22: Forecast')
-#    st.markdown('Jan23-Dec23: Budget')
-    
-    
+with col2:
+    st.markdown("January 2023 actuals have been added.")
+    link = '[Folder with Forecast Exports](https://usradiology-my.sharepoint.com/:f:/p/joshua_mcdonald/EgPfpgg-y2JCsBxEpAbJv2ABezQly_XsfZHzSKm4zFx9ug?e=F84hhe)'
+    st.markdown(link, unsafe_allow_html=True)    
     
     
     
