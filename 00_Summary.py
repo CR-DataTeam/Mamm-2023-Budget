@@ -56,8 +56,8 @@ col21=colSortList[24:36]
 col22=colSortList[36:48]
 col23=colSortList[48:60]
 
-editableMonths = colSortList[49:60]
-lockedMonths = colSortList[0:49]
+editableMonths = colSortList[50:60]
+lockedMonths = colSortList[0:50]
 
 facilityList=[FACNAME]
 
@@ -232,7 +232,7 @@ def displayTable(df: pd.DataFrame) -> AgGrid:
              'openByDefault':True,
              'children': [
                  {'field': 'Jan23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
-                 {'field': 'Feb23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
+                 {'field': 'Feb23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
                  {'field': 'Mar23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
                  {'field': 'Apr23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
                  {'field': 'May23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
