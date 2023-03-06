@@ -412,7 +412,7 @@ with col1:
     st.markdown("For the time being, Randolph & McDowell's Budget & Actual's are grouped together under the Randolph line item.")
 
 with col2:
-    st.markdown("January 2023 actuals have been added.")
+    st.markdown("1+11 Forecast has been added.")
     link = '[Folder with Forecast Exports](https://usradiology-my.sharepoint.com/:f:/p/joshua_mcdonald/EgPfpgg-y2JCsBxEpAbJv2ABezQly_XsfZHzSKm4zFx9ug?e=F84hhe)'
     st.markdown(link, unsafe_allow_html=True)    
     
