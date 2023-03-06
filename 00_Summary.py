@@ -413,6 +413,7 @@ with col1:
 
 with col2:
     st.markdown("1+11 Forecast has been added.")
+    st.markdown("February 2023 actuals have been updated.")
     link = '[Folder with Forecast Exports](https://usradiology-my.sharepoint.com/:f:/p/joshua_mcdonald/EgPfpgg-y2JCsBxEpAbJv2ABezQly_XsfZHzSKm4zFx9ug?e=F84hhe)'
     st.markdown(link, unsafe_allow_html=True)    
     
