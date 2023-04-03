@@ -233,7 +233,7 @@ def displayTable(df: pd.DataFrame) -> AgGrid:
              'children': [
                  {'field': 'Jan23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
                  {'field': 'Feb23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
-                 {'field': 'Mar23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
+                 {'field': 'Mar23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75, 'cellStyle':{'background-color':'lightblue'}},
                  {'field': 'Apr23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
                  {'field': 'May23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
                  {'field': 'Jun23', 'columnGroupShow':'open', 'editable':False, 'resizable':False, 'suppressSizeToFit':True, 'suppressAutoSize':True, 'filter':False, 'width':75},
@@ -412,8 +412,8 @@ with col1:
     st.markdown("For the time being, Randolph & McDowell's Budget & Actual's are grouped together under the Randolph line item.")
 
 with col2:
-    st.markdown("1+11 Forecast has been added.")
-    st.markdown("February 2023 actuals have been updated.")
+    st.markdown("2+10 Forecast has been added.")
+    st.markdown("March 2023 actuals have been updated.")
     link = '[Folder with Forecast Exports](https://usradiology-my.sharepoint.com/:f:/p/joshua_mcdonald/EgPfpgg-y2JCsBxEpAbJv2ABezQly_XsfZHzSKm4zFx9ug?e=F84hhe)'
     st.markdown(link, unsafe_allow_html=True)    
     
