@@ -121,7 +121,7 @@ dfit = fetchData()[0]
 
 
 #for i in range(len(facilityList)):
-def displayTable(df: pd.DataFrame) -> AgGrid:
+def displayTablee(df: pd.DataFrame):# -> AgGrid:
     i = 0
     
     testbuild = {
@@ -356,10 +356,25 @@ else { return (100*((
     }
     
     naming = facilityList[i].replace(' ','')
-    return AgGrid(
+    return testbuild
+#    AgGrid(
+#        data=dfit,
+#        editable=True,
+#        gridOptions=testbuild,
+#        #data_return_mode=DataReturnMode.AS_INPUT,
+#        #update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
+#        fit_columns_on_grid_load=True,
+#        theme='streamlit', 
+#        height=565, 
+#        allow_unsafe_jscode=True,
+#        enable_enterprise_modules=True,
+#        key=f'aggrid_{naming}_key',
+#        )      
+
+displayTable = AgGrid(
         data=dfit,
         editable=True,
-        gridOptions=testbuild,
+        gridOptions=displayTablee,#testbuild,
         #data_return_mode=DataReturnMode.AS_INPUT,
         #update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
         fit_columns_on_grid_load=True,
@@ -369,8 +384,6 @@ else { return (100*((
         enable_enterprise_modules=True,
         key=f'aggrid_{naming}_key',
         )      
-
-
 grid_response = displayTable(dfit)
 dfgo = grid_response['data']
 
