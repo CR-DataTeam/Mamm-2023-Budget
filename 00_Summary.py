@@ -16,20 +16,20 @@ st.set_page_config(
      page_title="Mamm 2023 Budget",
      layout="wide"
      )
-#padding = 0
-#st.markdown(f""" <style>
-#    .reportview-container .main .block-container{{
-#        padding-top: {padding}rem;
-#        padding-right: {padding}rem;
-#        padding-left: {padding}rem;
-#        padding-bottom: {padding}rem;
-#    }} </style> """, unsafe_allow_html=True)
-#
-#
-#st.markdown(sc.getCodeSnippet('sidebarWidth'), unsafe_allow_html=True)
-#st.markdown(sc.getCodeSnippet('hideStreamlitStyle'), unsafe_allow_html=True)
-#st.markdown(sc.getCodeSnippet('adjustPaddingAndFont'), unsafe_allow_html=True)
-#js = JsCode(sc.getCodeSnippet('jsCodeStr'))
+padding = 0
+st.markdown(f""" <style>
+    .reportview-container .main .block-container{{
+        padding-top: {padding}rem;
+        padding-right: {padding}rem;
+        padding-left: {padding}rem;
+        padding-bottom: {padding}rem;
+    }} </style> """, unsafe_allow_html=True)
+
+
+st.markdown(sc.getCodeSnippet('sidebarWidth'), unsafe_allow_html=True)
+st.markdown(sc.getCodeSnippet('hideStreamlitStyle'), unsafe_allow_html=True)
+st.markdown(sc.getCodeSnippet('adjustPaddingAndFont'), unsafe_allow_html=True)
+js = JsCode(sc.getCodeSnippet('jsCodeStr'))
 
 
 ###############################################################################
@@ -411,6 +411,8 @@ with col1:
     
     st.markdown("")
     st.markdown("For the time being, Randolph & McDowell's Budget & Actual's are grouped together under the Randolph line item.")
+    st.markdown("")
+    st.markdown("There's currently a bug in the underlying software that the developers are working to resolve. To see the table, please zoom in & out (CTRL + & -).")
 
 with col2:
     st.markdown("Latest Forecast Available: 3+9 Forecast.")
