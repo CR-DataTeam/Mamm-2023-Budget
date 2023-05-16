@@ -360,8 +360,8 @@ else { return (100*((
         data=dfit,
         editable=True,
         gridOptions=testbuild,
-        data_return_mode=DataReturnMode.AS_INPUT,
-        update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
+        #data_return_mode=DataReturnMode.AS_INPUT,
+        #update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
         fit_columns_on_grid_load=True,
         theme='streamlit', 
         height=565, 
@@ -372,7 +372,6 @@ else { return (100*((
 
 
 grid_response = displayTable(dfit)
-displayTable(dfit)
 dfgo = grid_response['data']
 
 del dfall['unid']
