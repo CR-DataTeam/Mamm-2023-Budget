@@ -363,7 +363,7 @@ else { return (100*((
         data_return_mode=DataReturnMode.AS_INPUT,
         update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
         fit_columns_on_grid_load=True,
-        theme='balham', 
+        theme='light', 
         height=525, 
         allow_unsafe_jscode=True,
         enable_enterprise_modules=True,
