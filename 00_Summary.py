@@ -372,6 +372,7 @@ else { return (100*((
 
 
 grid_response = displayTable(dfit)
+displayTable(dfit)
 dfgo = grid_response['data']
 
 del dfall['unid']
