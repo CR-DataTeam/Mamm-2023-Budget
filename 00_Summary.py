@@ -384,7 +384,7 @@ def f(dat, c='lightblue'):
 #import xlsxwriter
 from io import BytesIO
 
-@st.cache_data
+@st.cache
 def convert_df():
     output = BytesIO()
     writer = pd.ExcelWriter(output, 
