@@ -394,7 +394,7 @@ def convert_df():
         dfall[dfall['FacilityName']==XLfacilityList[i]].style.apply(f, axis=0, subset=lockedMonths).to_excel(writer,
                                                                  sheet_name=XLfacilityList[i],
                                                                  index=False)
-    writer.save()
+    writer.close()
     return output.getvalue() 
 
 
