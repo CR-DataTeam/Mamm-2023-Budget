@@ -370,7 +370,7 @@ else { return (100*((
         height=555, 
         allow_unsafe_jscode=True,
         enable_enterprise_modules=True,
-        key=f'aggrid_{naming}_key',
+        #key=f'aggrid_{naming}_key',
         )      
 
 grid_response = displayTable(dfit)
