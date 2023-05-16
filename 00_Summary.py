@@ -420,7 +420,14 @@ with col2:
     st.markdown("Latest Actuals Updated: through April 2023.")
     link = '[Folder with Forecast Exports, and the Original Budget](https://usradiology-my.sharepoint.com/:f:/p/joshua_mcdonald/EgPfpgg-y2JCsBxEpAbJv2ABBuSqk1-BXj9MadLMBcBxlg)'
     st.markdown(link, unsafe_allow_html=True)    
-    
-    
+
+paddingg=0.05
+st.markdown(f""" <style>
+    .reportview-container .main .block-container{{
+        padding-top: {paddingg}rem;
+        padding-right: {paddingg}rem;
+        padding-left: {paddingg}rem;
+        padding-bottom: {paddingg}rem;
+    }} </style> """, unsafe_allow_html=True)    
     
     
