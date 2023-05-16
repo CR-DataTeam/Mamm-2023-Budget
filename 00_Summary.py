@@ -361,13 +361,13 @@ else { return (100*((
         editable=True,
         gridOptions=testbuild,
         data_return_mode=DataReturnMode.AS_INPUT,
-        update_mode=GRID_CHANGED,#GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
+        update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
         fit_columns_on_grid_load=True,
         theme='streamlit', 
         height=555, 
         allow_unsafe_jscode=True,
         enable_enterprise_modules=True,
-        key=f'aggrid_{naming}_key',
+        key=f'aggrid_base_key',
         )      
 
 
