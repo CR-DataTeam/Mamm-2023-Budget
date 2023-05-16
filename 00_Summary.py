@@ -363,6 +363,7 @@ else { return (100*((
         gridOptions=testbuild,
         data_return_mode=DataReturnMode.AS_INPUT,
         update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
+        updated_on='cellValueChanged',
         #fit_columns_on_grid_load=True,
         columns_auto_size_mode = "FIT_ALL_COLUMNS_TO_VIEW",
         theme='streamlit', 
