@@ -373,9 +373,8 @@ else { return (100*((
         key=f'aggrid_{naming}_key',
         )      
 
-displayTable(dfit)
-#grid_response = displayTable(dfit)
-dfgo = displayTable(dfit)['data']#grid_response['data']
+grid_response = displayTable(dfit)
+dfgo = grid_response['data']
 
 del dfall['unid']
 del dfall['SortInt']
