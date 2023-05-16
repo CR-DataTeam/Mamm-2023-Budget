@@ -351,7 +351,8 @@ else { return (100*((
         'editable': True,
         'suppressMenu': True,
     },
-    'suppressColumnVirtualisation': True,
+    "suppressColumnVirtualisation":True,
+    "rowBuffer":9999999,
     "onCellValueChanged":"--x_x--0_0-- function(e) { let api = e.api; let rowIndex = e.rowIndex; let col = e.column.colId; let rowNode = api.getDisplayedRowAtIndex(rowIndex); api.flashCells({ rowNodes: [rowNode], columns: [col], flashDelay: 10000000000 }); }; --x_x--0_0--"
     }
     
