@@ -364,7 +364,7 @@ else { return (100*((
         update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
         fit_columns_on_grid_load=True,
         theme='streamlit', 
-        height=525, 
+        height=565, 
         allow_unsafe_jscode=True,
         enable_enterprise_modules=True,
         key=f'aggrid_{naming}_key',
