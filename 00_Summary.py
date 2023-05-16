@@ -361,7 +361,7 @@ else { return (100*((
         editable=True,
         gridOptions=testbuild,
         data_return_mode=DataReturnMode.AS_INPUT,
-        update_mode=VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
+        update_mode=GridUpdateMode.VALUE_CHANGED|GridUpdateMode.FILTERING_CHANGED,
         #fit_columns_on_grid_load=True,
         columns_auto_size_mode = ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW,
         theme='streamlit', 
