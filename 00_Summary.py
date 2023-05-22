@@ -413,10 +413,10 @@ with col1:
     st.markdown("")
     st.markdown("For the time being, Randolph & McDowell's Budget & Actual's are grouped together under the Randolph line item.")
     st.markdown("")
-    st.markdown("There's currently a bug in the underlying software that the developers are working to resolve. To see the table, please minimize the sidebar (by clicking the [X]).")
+    st.markdown("There's currently a bug in the underlying hosting company's software that the developers are working to resolve. To see the table, please minimize/unminimize the sidebar (by clicking the [X]).")
 
 with col2:
-    st.markdown("Latest Forecast Available: 3+9 Forecast.")
+    st.markdown("Latest Forecast Available: 4+8 Forecast.")
     st.markdown("Latest Actuals Updated: through April 2023.")
     link = '[Folder with Forecast Exports, and the Original Budget](https://usradiology-my.sharepoint.com/:f:/p/joshua_mcdonald/EgPfpgg-y2JCsBxEpAbJv2ABBuSqk1-BXj9MadLMBcBxlg)'
     st.markdown(link, unsafe_allow_html=True)    
