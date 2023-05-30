@@ -412,8 +412,8 @@ with col1:
     
     st.markdown("")
     st.markdown("For the time being, Randolph & McDowell's Budget & Actual's are grouped together under the Randolph line item.")
-    st.markdown("")
-    st.markdown("There's currently a bug in the underlying hosting company's software that the developers are working to resolve. To see the table, please minimize/unminimize the sidebar (by clicking the [X]).")
+    #st.markdown("")
+    #st.markdown("There's currently a bug in the underlying hosting company's software that the developers are working to resolve. To see the table, please minimize/unminimize the sidebar (by clicking the [X]).")
 
 with col2:
     st.markdown("Latest Forecast Available: 4+8 Forecast.")
