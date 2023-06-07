@@ -56,8 +56,8 @@ col21=colSortList[24:36]
 col22=colSortList[36:48]
 col23=colSortList[48:60]
 
-editableMonths = colSortList[52:60]
-lockedMonths = colSortList[0:52]
+editableMonths = colSortList[53:60]
+lockedMonths = colSortList[0:53]
 
 facilityList=[FACNAME]
 
