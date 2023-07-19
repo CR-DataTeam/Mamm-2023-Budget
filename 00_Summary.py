@@ -416,7 +416,7 @@ with col1:
     #st.markdown("There's currently a bug in the underlying hosting company's software that the developers are working to resolve. To see the table, please minimize/unminimize the sidebar (by clicking the [X]).")
 
 with col2:
-    st.markdown("Latest Forecast Available: 5+7 Forecast.")
+    st.markdown("Latest Forecast Available: 6+6 Forecast.")
     st.markdown("Latest Actuals Updated: through June 2023.")
     link = '[Folder with Forecast Exports, and the Original Budget](https://usradiology-my.sharepoint.com/:f:/p/joshua_mcdonald/EgPfpgg-y2JCsBxEpAbJv2ABBuSqk1-BXj9MadLMBcBxlg)'
     st.markdown(link, unsafe_allow_html=True)    
